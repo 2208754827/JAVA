@@ -15,18 +15,9 @@ public class ShopController {
     @Autowired
     RedisTemplate redisTemplate;
 
-
-
-
-
-
     @GetMapping("/status")
-    public Result <Integer> getShop(){
-
-
-       Integer status= (Integer) redisTemplate.opsForValue().get("SHOP_STATUS");
+    public Result<Integer> getShop(){
+       Integer status = (Integer) redisTemplate.opsForValue().get("SHOP_STATUS");
         return Result.success(status);
-
-
     }
 }

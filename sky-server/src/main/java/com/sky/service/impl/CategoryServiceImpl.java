@@ -58,6 +58,17 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     /**
+     * 条件查询分类（用户端，只查启用状态）
+     *
+     * @param type 分类类型（1=菜品分类，2=套餐分类）
+     * @return
+     */
+    @Override
+    public List<Category> list(Integer type) {
+        return categoryMapper.list(type);
+    }
+
+    /**
      * 分类分页查询
      *
      * @param categoryPageQueryDTO 分页查询条件（页码、每页条数、名称、类型）

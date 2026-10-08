@@ -32,6 +32,13 @@ public interface CategoryMapper {
     List<Category> get(Integer type);
 
     /**
+     * 条件查询分类（用户端，只查启用状态）
+     * @param type
+     * @return
+     */
+    List<Category> list(Integer type);
+
+    /**
      * 分类分页查询
      * @param categoryPageQueryDTO
      * @return

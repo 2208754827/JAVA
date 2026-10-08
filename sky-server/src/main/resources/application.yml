@@ -40,3 +40,11 @@ sky:
     admin-ttl: 7200000
     # 设置前端传递过来的令牌名称
     admin-token-name: token
+    user-secret-key: itheima
+    user-token-name: authentication
+    user-ttl: 7200000
+
+    wechat:
+      appid: ${sky.jwt.wechat.appid}
+
+      secret: ${sky.jwt.wechat.secret}
